@@ -1,0 +1,28 @@
+for milestone, i in milestones
+  unless i >= limit
+    h2
+      a(href=milestone.html_url, title=milestone.title)
+        strong= milestone.title
+      if (milestone.release_notes)
+        a.release-notes(href=milestone.release_notes.html_url) release notes
+
+    ul.milestone-issues
+      each issue in changelog[milestone.title]
+        li
+          a(href=issue.html_url, title=issue.title)
+            | ##{issue.number}
+          | &nbsp; #{issue.title}
+
+          if issue.pluginIssues
+            ul.plugin-issues
+              li
+                strong= issue.pluginIssues.repo
+              each pluginIssue in issue.pluginIssues.issues
+                li
+                  a(href=pluginIssue.html_url, title=pluginIssue.title)
+                    | ##{pluginIssue.number}
+                  | &nbsp; #{pluginIssue.title}
+
+if (limit < 100)
+  div
+    a(href='/updates?limit=100' class='button button-primary') Show all

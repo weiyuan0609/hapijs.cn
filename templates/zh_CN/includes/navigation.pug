@@ -1,0 +1,26 @@
+nav.animated.fadeInDown(role='navigation')
+
+  .content.cf
+
+    a.logo(href='/', title='← Back to home of hapi')
+
+    ul.nav-collapse.unstyled
+      li 
+        a(href='/updates', title='Updates') 更新
+      li 
+        a(href='/tutorials?lang=zh_CN', title='Tutorials') 教程
+      li
+        a(href='/api', title='API Reference') API
+      li
+        a(href='/community', title='Community') 社区
+      li
+        a(href='/plugins', title='Plugins') 插件
+      li
+        a(href='/contribute', title='Contribute to hapi') 贡献
+      li  
+        a(href='/resources', title='Resources') 资源
+      li
+        a(href='/help') 需要帮忙？
+      li
+        a.edit(href=editLink) 编辑
+          include edit-svg

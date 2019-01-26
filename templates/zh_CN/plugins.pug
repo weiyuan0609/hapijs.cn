@@ -1,0 +1,30 @@
+extends layout
+
+block title
+  title hapi Plugins
+
+block content
+  .content.page-api.cf
+
+    .column.api-description
+      p 这里有几十个用于 hapi 的插件，从文档到身份验证等等。 如果您编写或使用了此列表中未显示的插件，请向我们发送 <a href="https://github.com/hapijs/hapijs.com/blob/master/lib/plugins.js">pull request</a>。
+
+      each category, categoryName in plugins.categories
+        .category
+          a(id=categoryName)
+          h3= categoryName
+
+          ul
+            each plugin, pluginName in category
+              li
+                a(href=plugin.url)= pluginName
+                p= plugin.description
+
+    .column.nav-secondary
+      nav(role='toc')
+        h3 Plugins
+
+        ul.unstyled(role='categories')
+          each category, categoryName in plugins.categories
+            li(role='category')
+              a(href=`#${categoryName}`)= categoryName
