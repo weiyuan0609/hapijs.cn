@@ -1,1 +1,34 @@
-extends zh_CN/api
+extends layout
+
+block title
+  title #{tag} API Reference
+
+block content
+
+  .content.page-api.cf
+
+    .column.api-description.api-reference
+      .reference !{html}
+
+      if apiModules.length
+        .module-reference
+          h1#modules Modules
+          each module in apiModules
+            div(data-module-name=module.name) !{module.html}
+
+    .column.nav-secondary
+
+      .search
+        span Search :
+        input.search-input(id="searchText", placeholder="Type in a few words")
+
+      .tag-list.cf
+        p.pull-left Reference version:
+        .tag-list-toggle.pull-right= tag
+          ul.unstyled.tag-list-picker
+            each available in versions
+              if tag !== available
+                li
+                  a(href=`/api/${available}`)= available
+
+      nav
