@@ -37,17 +37,17 @@ npm start or npm run dev (for automatic code reload)
 注意：对于提交，您需要包含make过程中生成的 public / * 文件。 部署不做 make 。
 
 ## Add a translation for the tutorials
-In the directory `lib/tutorials` we have some directories with the name of the languages translated, to add a new translation, simply add a new folder in the `lib/tutorials` with your translation.
-An Example, if you translate the tutorials, to Brazilian Portuguese, you must use the `pt_BR` as the name of the directory.
-Inside the directory `pt_BR`, you need to follow the same struture we use in `en_US`, with all tutorials separated in markdown files and an `index.js` file that's export the tutorials and the titles.
-After finish the translations, you also need add your translation in the `index.js` file inside `lib/tutorials`.
+在目录 `lib/tutorials` 中，我们有一些目录，其中包含翻译的语言名称，要添加新的翻译，只需在 `lib / tutorials` 中添加一个新文件夹即可。
+如果您将教程翻译为巴西葡萄牙语，则必须使用 `pt_BR` 作为目录名称。
+在目录 `pt_BR` 中，你需要遵循我们在 `en_US` 中使用的相同结构，所有教程在 markdown 文件中分离，并且`index.js` 文件导出教程和标题。
+完成翻译后，您还需要在 `lib / tutorials` 中的 `index.js` 文件中添加您的翻译。
 
 ## Plugins
-hapijs.com maintains a list of community-created plugins [here](http://hapijs.com/plugins). If there are any plugins you have created or one you use often that isn't listed please send a [pull request](https://github.com/hapijs/hapijs.com/blob/master/lib/plugins.js). Please note the existing categories, but if your plugin does not fit one feel free to create your own. Please keep the plugins in alphabetical order to be fair to all contributors.
+hapijs.com 维护一个社区创建的插件列表 [here](http://hapijs.com/plugins)。 如果您创建了任何插件或经常使用未插入的插件，请发送 [pull request](https://github.com/hapijs/hapijs.com/blob/master/lib/plugins.js)。 请注意现有的类别，但如果您的插件不合适，可以随意创建自己的类别。 请按字母顺序保留插件，以便对所有贡献者公平。
 
 ## Community
 
-Using hapi? We'd love to hear from you and list your project in our [community listing](http://hapijs.com/community). You can get your project or company added in a few steps:
+使用 hapi ？ 我们很乐意听取您的意见，并在我们的 [community listing](http://hapijs.com/community) 中列出您的项目。 您可以通过几个步骤添加项目或公司：
 
 1. Fork the [hapijs.com repository](https://github.com/hapijs/hapijs.com)
 2. Add your logo to the [public/img](https://github.com/hapijs/hapijs.com/tree/master/public/img) folder. It should be in png format, at least 300 pixels wide. The name should follow the format `logo-<yourcompanyname>.png`.
